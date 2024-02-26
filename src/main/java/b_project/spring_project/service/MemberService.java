@@ -3,6 +3,7 @@ package b_project.spring_project.service;
 import b_project.spring_project.domain.Member;
 import b_project.spring_project.repository.MemberRepository;
 import b_project.spring_project.repository.MemoryMemberRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,7 @@ import java.util.Optional;
 
 //컴포넌트 스캔
 // 스프링 컨테이너에 스프링 빈 등록
+@Transactional
 public class MemberService {
     private final MemberRepository memberRepository;
 
